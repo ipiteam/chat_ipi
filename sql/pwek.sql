@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Client :  127.0.0.1
--- Généré le :  Lun 12 Décembre 2016 à 15:48
+-- Généré le :  Mar 13 Décembre 2016 à 13:28
 -- Version du serveur :  5.7.14
 -- Version de PHP :  5.6.25
 
@@ -28,8 +28,8 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `messages` (
   `id` int(11) NOT NULL,
-  `date_mess` date NOT NULL,
-  `heure_mess` time NOT NULL,
+  `date_mess` date DEFAULT NULL,
+  `heure_mess` time DEFAULT NULL,
   `id_profil` int(11) NOT NULL,
   `texte` text
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -42,7 +42,7 @@ CREATE TABLE `messages` (
 
 CREATE TABLE `profils` (
   `id` int(11) NOT NULL,
-  `email` text NOT NULL,
+  `email` varchar(255) NOT NULL,
   `pseudo` varchar(200) NOT NULL,
   `passwrd` varchar(255) NOT NULL,
   `avatar` blob,
@@ -52,6 +52,13 @@ CREATE TABLE `profils` (
   `description` text,
   `date_inscription` date NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Contenu de la table `profils`
+--
+
+INSERT INTO `profils` (`id`, `email`, `pseudo`, `passwrd`, `avatar`, `couleur`, `nom`, `prenom`, `description`, `date_inscription`) VALUES
+(1, 'sdgsdv@qsgdvqsg.com', 'Le ieuv', 'toto', NULL, NULL, 'sylvain', NULL, NULL, '2016-12-13');
 
 --
 -- Index pour les tables exportées
@@ -67,7 +74,9 @@ ALTER TABLE `messages`
 -- Index pour la table `profils`
 --
 ALTER TABLE `profils`
-  ADD PRIMARY KEY (`id`);
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `pseudo` (`pseudo`),
+  ADD UNIQUE KEY `email` (`email`);
 
 --
 -- AUTO_INCREMENT pour les tables exportées
@@ -82,7 +91,7 @@ ALTER TABLE `messages`
 -- AUTO_INCREMENT pour la table `profils`
 --
 ALTER TABLE `profils`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 --
 -- Contraintes pour les tables exportées
 --
@@ -96,4 +105,3 @@ ALTER TABLE `messages`
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
-
