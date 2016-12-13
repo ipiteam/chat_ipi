@@ -1,65 +1,75 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
-
-    <title>Profil</title>
-
-    <!-- Bootstrap Core CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Custom CSS -->
-    <link href="css/logo-nav.css" rel="stylesheet">
-
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
-
-</head>
-
-<body>
-
-    <!-- Navigation -->
-    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-        <div class="container">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                    <span class="sr-only">Toggle navigation</span>
+<!DOCTYPE html> 
+<html lang="en"> 
+ 
+<head> 
+ 
+    <meta charset="utf-8"> 
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1"> 
+    <meta name="description" content=""> 
+    <meta name="author" content=""> 
+ 
+    <title>Pwek</title> 
+ 
+    <!-- Bootstrap Core CSS --> 
+    <link href="css/bootstrap.min.css" rel="stylesheet"> 
+ 
+    <!-- Custom CSS --> 
+    <link href="css/logo-nav.css" rel="stylesheet"> 
+ 
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries --> 
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// --> 
+    <!--[if lt IE 9]> 
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script> 
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script> 
+    <![endif]--> 
+ 
+</head> 
+ 
+<body> 
+ 
+    <!-- Navigation --> 
+    <nav class="navbar navbar-inverse navbar-fixed-top"> 
+        <div class="container"> 
+            <!-- Brand and toggle get grouped for better mobile display --> 
+            <div class="navbar-header"> 
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"> 
+                    <span class="sr-only">Toggle navigation</span> 
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="#">
-                    <img src="http://placehold.it/150x50&text=Logo" alt="">
-                </a>
-            </div>
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav">
-                    <li>
-                        <a href="#">About</a>
-                    </li>
-                    <li>
-                        <a href="#">Services</a>
-                    </li>
-                    <li>
-                        <a href="#">Contact</a>
-                    </li>
+                </button> 
+                <a class="navbar-brand" href="index.html">
+                    <img src="img/title.jpg" alt=""> 
+                </a> 
+            </div> 
+            <!-- Collect the nav links, forms, and other content for toggling --> 
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1"> 
+                <ul class="nav navbar-nav">         
+                    <li> 
+                        <a href="chat.html">Chat</a> 
+                    </li> 
+                    <li> 
+                        <a href="profil.html">Profil</a> 
+                    </li>     
                 </ul>
-            </div>
-            <!-- /.navbar-collapse -->
-        </div>
-        <!-- /.container -->
+                <ul class="nav navbar-nav navbar-right">
+                    <li> 
+                        <form class="navbar-form"> 
+                            <div class="form-group"> 
+                                <input type="text" class="form-control form-control_head" placeholder="Recherche"> 
+                            </div> 
+                            <button type="submit" class="btn btn-default btn-default_head">Loupe</button> 
+                        </form> 
+                    </li> 
+                    <li> 
+                        <a href="index.html">Déconnexion</a> 
+                    </li> 
+                </ul> 
+            </div> 
+            <!-- /.navbar-collapse --> 
+        </div> 
+        <!-- /.container --> 
     </nav>
 
     <!-- Page Content -->
@@ -67,12 +77,12 @@
         <h1>Mon Profil</h1>
         <br>
 <!-- Avatar & Pseudo -->
-        <h2>[pseudo]</h2>
+        <h2>[PSEUDO]</h2>
         <br>
         <img src="img/lolwut.jpg" alt="votre avatar" class="avatar">
         <br><br><br>
 <!-- Texte Intro -->
-        <span class="salut col-lg-12 col-lg-push-2">Modifiez votre profil</span>
+        <span class="salut col-lg-10 col-lg-offset-2">Modifiez votre profil</span>
 <!-- Le formulaire principal : pseudo, pass, mail, nom, prenom, description, couleur -->
         <form class="form-horizontal" action="" method="post">
         	<!-- pseudo -->
@@ -118,16 +128,7 @@
                 </div>
             </div>
             <!-- couleur de fond des messages /!\ experimental -->
-            <div class="col-lg-10 col-lg-push-2 nopadding">
-                <span>Choisissez une couleur pour vous differencier sur le chat :</span>
-                <br>
-                <button class="btn btn_Bleu"></button>
-                <button class="btn btn_Vert"></button>
-                <button class="btn btn_Orange"></button>
-                <button class="btn btn_Jaune"></button>
-                <button class="btn btn_Rose"></button>
-                <button class="btn btn_Violet"></button>
-            </div>
+            
             <!-- Bouton de confirmation -->
             <div class="col-lg-10 col-lg-push-2 nopadding">
             	<button type="submit" class="btn btn-primary monbouton">Confirmer !</button>

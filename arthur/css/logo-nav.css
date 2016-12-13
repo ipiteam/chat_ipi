@@ -12,9 +12,9 @@ body {
     padding: 15px 0;
 }
 
-.navbar-fixed-top .navbar-brand {
+/*.navbar-fixed-top .navbar-brand {
     padding: 0 15px;
-}
+}*/
 
 @media(min-width:768px) {
     body {
@@ -24,6 +24,34 @@ body {
     .navbar-fixed-top .navbar-brand {
         padding: 15px 0;
     }
+}
+
+/* Form and submit button styling */ 
+.form-control_head { 
+  color: grey; 
+  background: #222222; 
+} 
+ 
+.form-control_head:focus { 
+  color: black; 
+  background: white; 
+  border-color: grey; 
+  box-shadow: none; 
+} 
+ 
+.btn-default_head { 
+  color: grey; 
+  background: #222222; 
+} 
+ 
+.btn-default_head:hover { 
+  color: white; 
+  background: #222222; 
+} 
+ 
+.btn-default_head:focus { 
+  color: white; 
+  background: #222222; 
 }
 
 /* modifications pour l'index et le profil */
@@ -51,4 +79,8 @@ body {
 
 .avatar {
 	height: 150px;
+}
+
+.boutdubout {
+  float: right;
 }
