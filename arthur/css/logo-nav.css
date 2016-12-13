@@ -10,11 +10,12 @@ body {
 
 .navbar-fixed-top .nav {
     padding: 15px 0;
+    margin: 0;
 }
 
-/*.navbar-fixed-top .navbar-brand {
+.navbar-fixed-top .navbar-brand {
     padding: 0 15px;
-}*/
+}
 
 @media(min-width:768px) {
     body {
@@ -23,6 +24,7 @@ body {
 
     .navbar-fixed-top .navbar-brand {
         padding: 15px 0;
+        margin: 0;
     }
 }
 
@@ -67,20 +69,24 @@ body {
 	font-style: italic;
 }
 
-/* modificateurs pou les boutons */
-.nopadding {
-	padding: 6px;
-	margin-bottom: 2em;
-}
-
+/* modificateurs pour les boutons */
 .monbouton {
-	width: 10em;
+	width: 15em;
+  margin: 0.5em;
 }
 
-.avatar {
-	height: 150px;
+.avatar {}
+
+.ipi_col-gauche {
+  background: #222;
+
 }
 
-.boutdubout {
-  float: right;
+.ipi_col-droite {
+  background: #d6f5ed;
+
+}
+
+.pwek_pseudo {
+  color: grey;
 }
