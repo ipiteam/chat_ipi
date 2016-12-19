@@ -33,7 +33,7 @@
                         </form>
                     </li>
                     <li>
-                        <a href="index.php">Déconnexion</a>
+                        <a href="deconnexion.php">Déconnexion</a>
                     </li>
                 </ul>
             </div>
