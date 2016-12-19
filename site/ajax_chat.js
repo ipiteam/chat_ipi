@@ -1,7 +1,7 @@
 if ("lastMsgId" in window) { var lastMsgId; }
 if ("colorArray" in window) {var colorArray = [ "red", "blue", "green", "orange"];}
 if ("colorIdArray" in window ) {var colorIdArray= [];}
-    var chatDiv = document.getElementById("chat");
+    var chatDiv = document.getElementById("ipi_mainchat");
 
 function getXMLHttpRequest() {
 	var xhr = null;
