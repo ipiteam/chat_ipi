@@ -58,6 +58,7 @@ if(!isset($_SESSION['id'])) {
                 return ret;
         }
         onLoad();
+    textToSend.focus();
     </script>
     <!-- /.container -->
 
