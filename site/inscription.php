@@ -68,6 +68,35 @@
         <!-- fin colonne gauche -->
     </div>
     <!-- /.container -->
+<script>
+
+document.getElementById('pseudo').addEventListener('input', function(e) {
+    var pattern = e.target.value;
+    if ( pattern.length >= 3  ) {
+        this.style.borderColor = "green";
+    } else {
+        this.style.borderColor = "red";
+    }
+});
+document.getElementById('mdp').addEventListener('input', function(e){
+    var pattern = e.target.value;
+    if ( pattern.length >= 6  ) {
+        this.style.borderColor = "green";
+    } else {
+        this.style.borderColor = "red";
+    }
+});
+document.getElementById('mail').addEventListener('input', function(e){
+    var pattern = e.target.value;
+    var regex = /.+@.+\..+/;
+    if ( regex.test(pattern)) {
+        this.style.borderColor = "green";
+    } else {
+        this.style.borderColor = "red";
+    }
+});
+
+</script>
 
 <?php
     include('footer.php');
