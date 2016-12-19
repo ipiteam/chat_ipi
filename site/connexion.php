@@ -25,13 +25,14 @@ session_start();
             	<button type="submit" class="btn btn-primary monbouton">Connexion</button>
             </div>
         </form>
-
+        <a href="inscription.php">
         <div class="col-lg-10 col-lg-push-2 nopadding">
             <span class="question">Vous n'avez pas de compte ?</span>
             <br>
             <button type="submit" class="btn btn-info monbouton">Inscription</button>
 
         </div>
+      </a>
     </div>
     <!-- /.container -->
 <?php
