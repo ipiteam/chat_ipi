@@ -8,7 +8,7 @@ session_start();
         <br>
         <span class="salut">Veuillez vous connecter pour chatter</span>
         <br><br><br><br>
-        <form class="form-horizontal" action="controle_connexion.php" method="post">
+        <form class="form-horizontal" action="control_connexion.php" method="post">
         	<div class="form-group">
             	<label class="control-label col-lg-2" for="pseudo">Pseudo :</label>
             	<div class="col-lg-6">
