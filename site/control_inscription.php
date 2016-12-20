@@ -39,8 +39,8 @@ if(isset($data['id']))
   header('Location: error_inscription.php');
 }
 
-$verif = $bdd->prepare('INSERT INTO profils
-  VALUES( NULL, :mail, :pseudo, :pass, NULL, NULL, :nom, :prenom, :description, CURDATE())');
+$verif = $bdd->prepare('INSERT INTO profils(id, email, pseudo, passwrd, avatar, couleur, nom, prenom, description, date_inscription, date_refresh, status)
+  VALUES( NULL, :mail, :pseudo, :pass, NULL, NULL, :nom, :prenom, :description, CURDATE(), NOW(), 1)');
 
 
 $verif->execute(array(

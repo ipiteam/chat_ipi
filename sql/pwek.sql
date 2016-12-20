@@ -100,7 +100,13 @@ ALTER TABLE `profils`
 -- Contraintes pour la table `messages`
 --
 ALTER TABLE `messages`
-  ADD CONSTRAINT `messages_ibfk_1` FOREIGN KEY (`id`) REFERENCES `profils` (`id`);
+  ADD CONSTRAINT `messages_ibfk_1` FOREIGN KEY (`id_profil`) REFERENCES `profils` (`id`);
+
+--
+-- Événements
+--
+/* CREATE DEFINER=`root`@`localhost` EVENT `e_refresh_status` ON SCHEDULE EVERY 30 SECOND STARTS '2016-12-20 11:29:06' ON COMPLETION NOT PRESERVE ENABLE DO UPDATE profils SET status=0 WHERE (NOW()-date_refresh)>30$$ */
+CREATE EVENT e_refresh_status ON SCHEDULE EVERY 30 SECOND DO UPDATE profils SET status=0 WHERE (NOW()-date_refresh)>30;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
