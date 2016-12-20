@@ -10,7 +10,7 @@
                     <span class="icon-bar"></span>
                 </button>
                 <a class="navbar-brand" href="index.php">
-                    <img src="img/title.jpg" alt="">
+                    <img src="img/logo_pwek.svg" alt="pwek-smileyface" style="height:80px;">
                 </a>
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
@@ -24,13 +24,21 @@
                     </li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
-                    <li>
-                        <form class="navbar-form">
+                    <li class="pwek_barre-recherche">
+                        <div class="input-group pwek_input-group">
+                            <input  type="text" class="form-control pwek_form-recherche" placeholder="..."/>
+                            <span class="input-group-btn">
+                                <button class="btn btn-secondary pwek_btn-recherche" type="button">
+                                    <span class="glyphicon glyphicon-search" style="font-size: 1.5em;"/>
+                                </button>
+                            </span>
+                        </div>
+                        <!-- <form class="navbar-form">
                             <div class="form-group">
-                                <input type="text" class="form-control form-control_head" placeholder="Recherche">
+                                <input type="text" class="form-control form-control_head">
                             </div>
                             <button type="submit" class="btn btn-default btn-default_head"><span class="glyphicon glyphicon-search"></span></button>
-                        </form>
+                        </form> -->
                     </li>
                     <li>
                         <a href="deconnexion.php">Déconnexion</a>

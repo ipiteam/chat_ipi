@@ -5,12 +5,20 @@
  */
 
 body {
-    padding-top: 70px; /* Required padding for .navbar-fixed-top. Change if height of navigation changes. */
+    background-color: ghostwhite;
+    padding-top: 70px;
+    font-family: calibri, sans-serif;  /* Required padding for .navbar-fixed-top. Change if height of navigation changes. */
 }
 
 .navbar-fixed-top .nav {
-    padding: 15px 0;
-    margin: 0;
+    padding: 15px 0px 12px 0px;
+    margin: 0px;
+}
+
+.nav li a {
+    padding-top: 33px;
+    padding-bottom: 0px;
+    font-weight: bold;
 }
 
 .navbar-fixed-top .navbar-brand {
@@ -18,75 +26,117 @@ body {
 }
 
 @media(min-width:768px) {
-    body {
+      body {
         padding-top: 100px; /* Required padding for .navbar-fixed-top. Change if height of navigation changes. */
     }
-
     .navbar-fixed-top .navbar-brand {
-        padding: 15px 0;
+        padding: 0px 0;
         margin: 0;
+    }
+    .pwek_form_nopad {
+      padding-right: 0px;
+    }
+    .input-group[class*="col-"] {
+     float: left; 
     }
 }
 
-/* Form and submit button styling */ 
-.form-control_head { 
-  color: grey; 
-  background: #222222; 
-} 
- 
-.form-control_head:focus { 
-  color: black; 
-  background: white; 
-  border-color: grey; 
-  box-shadow: none; 
-} 
- 
-.btn-default_head { 
-  color: grey; 
-  background: #222222; 
-} 
- 
-.btn-default_head:hover { 
-  color: white; 
-  background: #222222; 
-} 
- 
-.btn-default_head:focus { 
-  color: white; 
-  background: #222222; 
+.navbar-form {
+  padding-top: 8px;
 }
 
-/* modifications pour l'index et le profil */
 
-/* le style du texte d'accueil */
-.salut { 
-	font-size: 120%;
-	font-weight: bold;
-	margin-bottom: 1em;
+/* CUSTOM CLASSES */
+
+/* Pour la barre de titre */ 
+
+.pwek_barre-recherche {
+  width: 200px;
 }
 
-.question {
-	font-style: italic;
+.pwek_input-group {
+  margin-top: 15px;
+  margin-right: 8px;
+  font-weight: bold;
+}
+  /* bouton loupe */
+  .pwek_btn-recherche {
+    padding:4px 8px 2px 8px;
+    color: grey; 
+    background: #222;
+    border: 0.8px solid #CCC;
+  }
+  .pwek_btn-recherche:hover {
+    color: white; 
+    background: #222;
+  }
+  .pwek_btn-recherche:focus {
+    color: white; 
+    background: #222;
+  }
+  .pwek_btn-recherche:active {
+    color: white; 
+    background: #222;
+    border-color: white;
+    box-shadow: 0px 0px 3px 1px #CCC;
+  }
+
+  /* champ recherche */
+  .pwek_form-recherche {
+    color: grey; 
+    background: #222;
+  }
+  .pwek_form-recherche:focus { 
+    color: white; 
+    background: #222; 
+    border-color: white;
+  }
+
+/* pour les pages en général */
+
+.main_container {
+  background-color: ghostwhite;
 }
 
-/* modificateurs pour les boutons */
-.monbouton {
-	width: 15em;
-  margin: 0.5em;
-}
-
-.avatar {}
-
-.ipi_col-gauche {
-  background: #222;
-
-}
-
-.ipi_col-droite {
+.pwek_main {
   background: #d6f5ed;
+  border-radius: 8px;
+  box-shadow: 0px 0px 20px 5px #cfcfcf; 
+}
 
+.pwek_welcome {
+  margin: 20px 0px 0px 50px;
+  font-size: 1.8em;
+  font-weight: bold;
+  color: #222222;
+}
+
+.pwek_welcome_sub {
+  margin-left: 20px;
+  margin-bottom: 15px;
+  font-size: 1.3em;
+  color: #222222;
+}
+
+.pwek_question {
+  font-style: italic;
+  font-size: 1.3em;
+  text-align: center;
 }
 
 .pwek_pseudo {
   color: grey;
 }
+
+.monbouton {
+  font-weight: bold;
+  font-style: normal;
+  padding: 10px;
+  margin-top: 15px;
+  width: 100%;
+}
+
+
+
+/* modificateurs pour les boutons */
+

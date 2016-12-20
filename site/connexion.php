@@ -1,40 +1,63 @@
 <?php
-session_start();
+    session_start();
     include('header.php');
 ?>
-    <!-- Page Content -->
-    <div class="container">
-        <h1>Bienvenue</h1>
-        <br>
-        <span class="salut">Veuillez vous connecter pour chatter</span>
-        <br><br><br><br>
-        <form class="form-horizontal" action="control_connexion.php" method="post">
-        	<div class="form-group">
-            	<label class="control-label col-lg-2" for="pseudo">Pseudo :</label>
-            	<div class="col-lg-6">
-            		<input type="text" id="pseudo" class="form-control" placeholder="Pseudo" name="pseudo">
-            	</div>
-            </div>
-            <div class="form-group">
-            	<label class="control-label col-lg-2" for="mdp">Mot de passe :</label>
-            	<div class="col-lg-6">
-            		<input type="password" id="mdp" class="form-control" placeholder="Mot de passe" name="mdp">
-            	</div>
-            </div>
-            <div class="col-lg-10 col-lg-push-2 nopadding">
-            	<button type="submit" class="btn btn-primary monbouton">Connexion</button>
-            </div>
-        </form>
-        <a href="inscription.php">
-        <div class="col-lg-10 col-lg-push-2 nopadding">
-            <span class="question">Vous n'avez pas de compte ?</span>
-            <br>
-            <button type="submit" class="btn btn-info monbouton">Inscription</button>
 
+<div class="main_container">
+
+    <div class="pwek_main col-md-6 col-md-offset-3 col-sm-10 col-sm-offset-1" style="height:200px">
+    <br>
+
+        <div class="row">
+
+<!-- Smileyface -->
+            <div class="col-sm-2 pwek_welcome">
+            <img src="img/default_avatar.svg" style="height:120px; margin-left:-30px;">
+            </div>
+            <br>
+
+<!-- Champs -->
+            <form class="form-horizontal" action="control_connexion.php" method="post">
+                <div class="input-group col-sm-6 col-sm-offset-1">
+                    <span class="input-group-addon">
+                        <i class="glyphicon glyphicon-user"></i>
+                    </span>
+                    <input id="pseudo" type="text" class="form-control" name="pseudo" placeholder="Pseudo">
+                </div>
+
+                <div class="input-group col-sm-6 col-sm-offset-1">
+                    <span class="input-group-addon">
+                        <i class="glyphicon glyphicon-lock"></i>
+                    </span>
+                    <input id="mdp" type="password" class="form-control" name="mdp" placeholder="Mot de Passe">
+                </div>
+
+<!-- Bouton de confirmation -->
+                <div class="col-sm-6 col-sm-offset-1 col-xs-4 col-xs-offset-4">
+                    <button type="submit" class="btn btn-primary monbouton">
+                        <span class="glyphicon glyphicon-ok" style="font-size:1.5em;"></span>
+                    </button>
+                </div>
+            </form>
+
+        </div> <!-- /.row -->
+    </div> <!-- /.pwek_main -->
+
+<!-- Zone d'inscription -->
+    <div class="pwek_question col-md-6 col-md-offset-3 col-sm-10 col-sm-offset-1 col-xs-12">
+        <br><br>
+        Pas de compte ?
+        <br>
+        <a href="inscription.php">
+        <div class="col-sm-4 col-sm-offset-4 col-xs-4 col-xs-offset-4">
+            <button type="submit" class="btn btn-default monbouton">
+                S'inscrire
+            </button>
         </div>
-      </a>
-    </div>
-    <!-- /.container -->
-<?php
-    include('footer.php');
+        </a>
+    </div> <!-- /.pwek_question -->
+
+</div> <!-- /.main_container -->
+
+<?php include('footer.php');
 ?>
