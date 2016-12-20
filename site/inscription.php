@@ -1,9 +1,8 @@
 <?php 
     include('header.php');
-    include('nav.php');
 ?>
 
-<div class="main_container">
+<div class="container">
 
     <div class="pwek_main col-md-6 col-md-offset-3 col-sm-10 col-sm-offset-1">
     <br>
@@ -52,7 +51,7 @@
                 </div>
             </div>
             <!-- bio -->
-            <div class="form-group">
+            <div class="form-group pwek_last">
                 <label class="control-label col-sm-3" for="description">À propos de moi :</label>
                 <div class="col-sm-8 pwek_form_nopad">
                     <textarea id="description" class="form-control" placeholder="Votre description" rows="5" name="description"></textarea>
@@ -60,13 +59,15 @@
             </div>
             <!-- Bouton de confirmation -->
             <div class="row">
-            	<button type="submit" class="btn btn-primary col-sm-3 col-sm-offset-8 col-xs-4 col-xs-offset-4 monbouton">S'inscrire !</button>
+                <div class="col-sm-3 col-sm-offset-8 col-xs-4 col-xs-offset-4">
+                	<button type="submit" class="btn btn-primary pwek_btn" style="margin-left:15px;">Valider</button>
+                </div>
             </div>
             <br>
         </form>
 
     </div> <!-- /.pwek_main -->
-</div> <!-- /.main-container -->
+</div> <!-- /.container -->
 
 <script>
 

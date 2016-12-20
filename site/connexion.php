@@ -3,7 +3,7 @@
     include('header.php');
 ?>
 
-<div class="main_container">
+<div class="container">
 
     <div class="pwek_main col-md-6 col-md-offset-3 col-sm-10 col-sm-offset-1" style="height:200px">
     <br>
@@ -34,7 +34,7 @@
 
 <!-- Bouton de confirmation -->
                 <div class="col-sm-6 col-sm-offset-1 col-xs-4 col-xs-offset-4">
-                    <button type="submit" class="btn btn-primary monbouton">
+                    <button type="submit" class="btn btn-primary pwek_btn">
                         <span class="glyphicon glyphicon-ok" style="font-size:1.5em;"></span>
                     </button>
                 </div>
@@ -50,14 +50,14 @@
         <br>
         <a href="inscription.php">
         <div class="col-sm-4 col-sm-offset-4 col-xs-4 col-xs-offset-4">
-            <button type="submit" class="btn btn-default monbouton">
+            <button type="submit" class="btn btn-default pwek_btn">
                 S'inscrire
             </button>
         </div>
         </a>
     </div> <!-- /.pwek_question -->
 
-</div> <!-- /.main_container -->
+</div> <!-- /.container -->
 
 <?php include('footer.php');
 ?>

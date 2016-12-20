@@ -128,12 +128,16 @@ body {
   color: grey;
 }
 
-.monbouton {
+.pwek_btn {
   font-weight: bold;
   font-style: normal;
   padding: 10px;
   margin-top: 15px;
   width: 100%;
+}
+
+.pwek_last {
+  margin: 0;
 }
 
 
