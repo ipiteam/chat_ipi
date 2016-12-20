@@ -1,9 +1,11 @@
-.ipi_membres {
+#container{
+
+    width:100%;
+}
+
+#ipi_membres {
 	background: #222222;
 	color: white;
-	height: 650px;
-	max-height: 650px;
-    display: none;
 }
 
 #ipi_mainchat{

@@ -30,8 +30,15 @@ $req = $bdd->query('SELECT m.id id, m.id_profil id_profil, p.pseudo pseudo, m.te
                          FROM messages m
                          JOIN profils p ON m.id_profil = p.id
                          WHERE m.id > ?");
+     $req->execute(array($_GET['last']));
+
+
+} else if ($_GET['status'] == "get_status"){
+     $req = $bdd->prepare("SELECT id, pseudo
+                         FROM profils
+                         WHERE status=1");
     $req->execute(array($_GET['last']));
-}
+ }
 while ($donnees = $req->fetch())
 {
     echo "<item id=\"" . $donnees["id"]

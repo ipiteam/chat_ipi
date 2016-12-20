@@ -11,10 +11,14 @@ if(!isset($_SESSION['id'])) {
     <link rel="stylesheet" href="style.css">
 
     <!-- Page Content -->
-    <div class="container">
+    <div id="container">
         <div class="ipi_membres">
+Liste
+<ul id="listes">
+</ul>
 
         </div>
+        <div>
         <div class="row">
             <div id="ipi_mainchat" class="col-lg-6 col-md-6 col-lg-offset-3 col-md-offset-3">
                 <div id="chat"> </div>
@@ -24,8 +28,9 @@ if(!isset($_SESSION['id'])) {
                 <div id="envoieMsg" class="col-lg-6 col-lg-offset-3 col-md-6 col-md-offset-3 col-sm-12 col-xs-12" >
                     <textarea id="sendTextArea" class="col-lg-10 col-md-10 col-sm-10 col-xs-10" name="" placeholder="ctrl + entrer pour envoyer"></textarea>
                     <input type="button" id="sendButton" value="envoyer" class="btn-primary col-lg-2 col-md-2 col-sm-2 col-xs-2" onclick="sendMsg()">
-                </div>
         </div>
+        </div>
+    </div>
 
         <script type="text/javascript" src="ajax_chat.js"></script>
         <script>
@@ -58,6 +63,16 @@ if(!isset($_SESSION['id'])) {
                 return ret;
         }
         onLoad();
+
+        function refresh_id() {
+            ret = setInterval( function() {
+                requestOnLoad(readStatus, <?php echo $_SESSION['id']?>, "status=get_status");
+                        } , 1000);
+                return ret;
+        }
+
+        refresh_id();
+
     </script>
     <!-- /.container -->
 

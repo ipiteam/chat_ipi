@@ -34,6 +34,7 @@ function requestOnLoad(callback, id, getOpts) {
     xhr.open("GET", "server.php?" + getOpts, true);
     xhr.send(null);
 }
+
 function requestSend( id, texte) {
     var xhr   = getXMLHttpRequest();
 	var ret = 1;
@@ -124,4 +125,19 @@ function appendChildMsgText(parent, element, clName, string, color) {
         o.style.color = color;
     }
     parent.appendChild(o);
+}
+
+function readStatus(oData, id) {
+    var listes = document.getElementById("listes");
+
+    var l;
+
+    var nodes   = oData.getElementsByTagName("item");
+    var oBloc;
+    var col = null;
+    listes.innerHTML = ""; // reset le chat
+    for (var i = nodes.length - 1; i >= 0; i--) {
+        appendChildMsgInfo(listes, "li", "oli", nodes[i].getAttribute("pseudo"));
+    }
+    return 0;
 }
